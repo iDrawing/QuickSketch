@@ -14,6 +14,23 @@
 
 @implementation QSViewController
 
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -27,37 +44,44 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)eraserButtonActionUp:(id)sender {
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [canvasView eraseCanvas];
+    }
+}
+
+- (IBAction)eraserButtonActionUp:(id)sender
+{
     
     [canvasView setStrokeColor:[UIColor whiteColor]];
     [canvasView setPathLineWidth:8.0];
 }
 
-- (IBAction)blackMarkerButtonActionUp:(id)sender {
+- (IBAction)blackMarkerButtonActionUp:(id)sender
+{
 
     [canvasView setStrokeColor:[UIColor blackColor]];
     [canvasView setPathLineWidth:2.0];
 }
 
-- (IBAction)redMarkerButtonActionUp:(id)sender {
+- (IBAction)redMarkerButtonActionUp:(id)sender
+{
 
     [canvasView setStrokeColor:[UIColor redColor]];
     [canvasView setPathLineWidth:2.0];
 }
 
-- (IBAction)blueMarkerButtonActionUp:(id)sender {
+- (IBAction)blueMarkerButtonActionUp:(id)sender
+{
 
     [canvasView setStrokeColor:[UIColor blueColor]];
     [canvasView setPathLineWidth:2.0];
 }
 
-- (IBAction)yellowMarkerButtonActionUp:(id)sender {
-
-    [canvasView setStrokeColor:[UIColor yellowColor]];
-    [canvasView setPathLineWidth:2.0];
-}
-
-- (IBAction)cameraRollSaveButtonActionUp:(id)sender {
+- (IBAction)cameraRollButtonActionUp:(id)sender
+{
 }
 
 - (IBAction)emailButtonActionUp:(id)sender

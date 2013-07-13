@@ -17,4 +17,6 @@
 -(void) setStrokeColor:(UIColor *)color;
 -(void) setPathLineWidth:(float)lineWidth;
 
+-(void) eraseCanvas;
+
 @end

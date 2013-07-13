@@ -12,9 +12,9 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9t-uK-pVc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiT-46-iET">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="KsD-Z4-lAN"/>
+                                    <constraint firstAttribute="height" constant="46" id="eYS-B7-Npy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Blue Marker" image="marker_blue.png">
@@ -25,10 +25,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgd-eV-2yf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT9-u3-2Sj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="4Mf-N5-lNw"/>
-                                    <constraint firstAttribute="width" constant="45" id="UAA-Jx-hxT"/>
+                                    <constraint firstAttribute="height" constant="46" id="Lp5-xx-lFy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Red Marker" image="marker_red.png">
@@ -39,9 +38,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOO-Co-neb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7a-eT-Fxn">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="bLa-zq-gEP"/>
+                                    <constraint firstAttribute="height" constant="46" id="gEv-EK-4cw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Black Marker" image="marker_black.png">
@@ -52,10 +51,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvo-pI-Cjt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMP-YK-adA">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Ydk-1x-EF9"/>
-                                    <constraint firstAttribute="width" constant="45" id="uvn-en-Qru"/>
+                                    <constraint firstAttribute="height" constant="46" id="3Ue-XG-DbB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Eraser" image="eraser.png">
@@ -66,19 +64,65 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC0-l8-WR2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="qEi-5u-QqE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Email Button" image="email_button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-Y7-AVP">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Yellow Marker" image="marker_yellow.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foP-ju-Rfh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="5te-et-AnK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Camera Roll Save" image="camera_roll.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jgd-eV-2yf" firstAttribute="trailing" secondItem="b9t-uK-pVc" secondAttribute="trailing" type="default" id="2yR-cm-Eye"/>
-                            <constraint firstItem="Jgd-eV-2yf" firstAttribute="leading" secondItem="b9t-uK-pVc" secondAttribute="leading" type="default" id="EkD-vc-30a"/>
-                            <constraint firstAttribute="bottom" secondItem="Jgd-eV-2yf" secondAttribute="bottom" constant="97" id="Tgt-iF-JQn"/>
-                            <constraint firstAttribute="bottom" secondItem="mOO-Co-neb" secondAttribute="bottom" constant="157" id="TzM-Cb-8Fb"/>
-                            <constraint firstAttribute="trailing" secondItem="Jgd-eV-2yf" secondAttribute="trailing" constant="27" id="WZc-NA-oJX"/>
-                            <constraint firstItem="Nvo-pI-Cjt" firstAttribute="leading" secondItem="mOO-Co-neb" secondAttribute="leading" type="default" id="Wsi-AX-R5h"/>
-                            <constraint firstAttribute="trailing" secondItem="Nvo-pI-Cjt" secondAttribute="trailing" constant="29" id="Xes-EW-p5m"/>
-                            <constraint firstAttribute="bottom" secondItem="Nvo-pI-Cjt" secondAttribute="bottom" constant="217" id="bcx-rw-WVo"/>
-                            <constraint firstAttribute="bottom" secondItem="b9t-uK-pVc" secondAttribute="bottom" constant="37" id="gcO-GL-mH0"/>
-                            <constraint firstItem="Nvo-pI-Cjt" firstAttribute="trailing" secondItem="mOO-Co-neb" secondAttribute="trailing" type="default" id="oOb-Gw-RnU"/>
+                            <constraint firstAttribute="bottom" secondItem="KMP-YK-adA" secondAttribute="bottom" constant="366" id="6TA-ur-7ZV"/>
+                            <constraint firstItem="foP-ju-Rfh" firstAttribute="leading" secondItem="KMP-YK-adA" secondAttribute="leading" type="default" id="Esa-vz-8FM"/>
+                            <constraint firstItem="foP-ju-Rfh" firstAttribute="leading" secondItem="ZC0-l8-WR2" secondAttribute="leading" type="default" id="Geb-SL-s9b"/>
+                            <constraint firstAttribute="trailing" secondItem="foP-ju-Rfh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HED-zP-AhB"/>
+                            <constraint firstAttribute="trailing" secondItem="ZC0-l8-WR2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JqG-TP-JES"/>
+                            <constraint firstAttribute="bottom" secondItem="fT9-u3-2Sj" secondAttribute="bottom" constant="193" id="QG9-sx-wnX"/>
+                            <constraint firstAttribute="bottom" secondItem="tIs-Y7-AVP" secondAttribute="bottom" constant="80" id="Qw1-xl-kXW"/>
+                            <constraint firstAttribute="trailing" secondItem="KMP-YK-adA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="XI5-4q-WPo"/>
+                            <constraint firstAttribute="bottom" secondItem="qiT-46-iET" secondAttribute="bottom" constant="134" id="aaf-UI-IPr"/>
+                            <constraint firstItem="O7a-eT-Fxn" firstAttribute="leading" secondItem="KMP-YK-adA" secondAttribute="leading" type="user" id="cV5-5X-Zrx"/>
+                            <constraint firstAttribute="trailing" secondItem="O7a-eT-Fxn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fBs-GS-KmU"/>
+                            <constraint firstAttribute="trailing" secondItem="fT9-u3-2Sj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gpU-g7-YBv"/>
+                            <constraint firstItem="foP-ju-Rfh" firstAttribute="top" secondItem="ZC0-l8-WR2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hwc-ji-sja"/>
+                            <constraint firstItem="tIs-Y7-AVP" firstAttribute="leading" secondItem="qiT-46-iET" secondAttribute="leading" type="default" id="j2q-9R-Aen"/>
+                            <constraint firstAttribute="bottom" secondItem="O7a-eT-Fxn" secondAttribute="bottom" constant="253" id="nFO-HF-DbU"/>
+                            <constraint firstAttribute="trailing" secondItem="qiT-46-iET" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="py9-u4-VfQ"/>
+                            <constraint firstItem="ZC0-l8-WR2" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="qGh-Pa-lHK"/>
+                            <constraint firstAttribute="trailing" secondItem="tIs-Y7-AVP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vaM-Et-b5S"/>
+                            <constraint firstItem="fT9-u3-2Sj" firstAttribute="leading" secondItem="qiT-46-iET" secondAttribute="leading" type="default" id="xRF-Yq-BpX"/>
+                            <constraint firstItem="O7a-eT-Fxn" firstAttribute="leading" secondItem="fT9-u3-2Sj" secondAttribute="leading" type="user" id="yOa-TX-48g"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -87,10 +131,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera_roll.png" width="45" height="45"/>
+        <image name="email_button.png" width="45" height="45"/>
         <image name="eraser.png" width="45" height="45"/>
         <image name="marker_black.png" width="45" height="45"/>
         <image name="marker_blue.png" width="45" height="45"/>
         <image name="marker_red.png" width="45" height="45"/>
+        <image name="marker_yellow.png" width="45" height="45"/>
     </resources>
     <classes>
         <class className="DrawingCanvasView" superclassName="UIView">
@@ -101,6 +148,14 @@
         </class>
         <class className="QSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QSViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="blackMarkerButtonActionUp:"/>
+                <relationship kind="action" name="blueMarkerButtonActionUp:"/>
+                <relationship kind="action" name="cameraRollButtonActionUp:"/>
+                <relationship kind="action" name="emailButtonActionUp:"/>
+                <relationship kind="action" name="eraserButtonActionUp:"/>
+                <relationship kind="action" name="redMarkerButtonActionUp:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
