@@ -30,6 +30,7 @@
 		D1EF35D217913EA200652ACA /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35D117913EA200652ACA /* ImageUtils.m */; };
 		D1EF35D41791422A00652ACA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF35D31791422A00652ACA /* MessageUI.framework */; };
 		D1EF35D81791449400652ACA /* KSSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35D71791449400652ACA /* KSSheetView.m */; };
+		D1EF35DE17914D5D00652ACA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF35DD17914D5D00652ACA /* QuartzCore.framework */; };
 		D1FD7EFF179106BD00BE6D74 /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */; };
 		D1FD7F01179106C600BE6D74 /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F00179106C600BE6D74 /* icon-114x114.png */; };
 		D1FD7F03179106E800BE6D74 /* icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F02179106E800BE6D74 /* icon-72x72.png */; };
@@ -71,6 +72,7 @@
 		D1EF35D61791449400652ACA /* KSSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSheetView.h; sourceTree = "<group>"; };
 		D1EF35D71791449400652ACA /* KSSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSheetView.m; sourceTree = "<group>"; };
 		D1EF35D9179144C800652ACA /* ARCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCHelper.h; sourceTree = "<group>"; };
+		D1EF35DD17914D5D00652ACA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57x57.png"; sourceTree = "<group>"; };
 		D1FD7F00179106C600BE6D74 /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114x114.png"; sourceTree = "<group>"; };
 		D1FD7F02179106E800BE6D74 /* icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72x72.png"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1EF35DE17914D5D00652ACA /* QuartzCore.framework in Frameworks */,
 				D1EF35D41791422A00652ACA /* MessageUI.framework in Frameworks */,
 				D14143B0178FEE8000C84510 /* UIKit.framework in Frameworks */,
 				D14143B2178FEE8000C84510 /* Foundation.framework in Frameworks */,
@@ -96,7 +99,7 @@
 		D14143A3178FEE8000C84510 = {
 			isa = PBXGroup;
 			children = (
-				D1EF35D31791422A00652ACA /* MessageUI.framework */,
+				D1EF35DD17914D5D00652ACA /* QuartzCore.framework */,
 				D1FD7F04179106F000BE6D74 /* icon-144x144.png */,
 				D1FD7F02179106E800BE6D74 /* icon-72x72.png */,
 				D1FD7F00179106C600BE6D74 /* icon-114x114.png */,
@@ -118,6 +121,7 @@
 		D14143AE178FEE8000C84510 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1EF35D31791422A00652ACA /* MessageUI.framework */,
 				D14143AF178FEE8000C84510 /* UIKit.framework */,
 				D14143B1178FEE8000C84510 /* Foundation.framework */,
 				D14143B3178FEE8000C84510 /* CoreGraphics.framework */,

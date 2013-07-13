@@ -115,6 +115,14 @@
 
 - (IBAction)cameraRollButtonActionUp:(id)sender
 {
+    UIImage *canvasImage = [canvasView imageByRenderingView];
+    if (canvasImage == nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cameraroll Error" message: @"Problem creating image of worksheet canvas." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+        UIImageWriteToSavedPhotosAlbum(canvasImage, nil, nil, nil);
 }
 
 - (IBAction)emailButtonActionUp:(id)sender
@@ -136,13 +144,15 @@
         // [picker setBccRecipients:bccRecipients];
         
         // Attach an image to the email
-        UIImage *coolImage = [canvasView writeCanvasToJPG];
-        if (coolImage == nil)
+        NSString *canvasImagePath = [canvasView writeCanvasToJPG];
+        if (canvasImagePath == nil)
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Attachment Error" message: @"Problem converting Worksheet canvas to JPG." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
             return;
         }
+
+        UIImage *coolImage = [canvasView imageByRenderingView];
         NSData *myData = UIImagePNGRepresentation(coolImage);
         [picker addAttachmentData:myData mimeType:@"image/png" fileName:@"coolImage.png"];
         
@@ -150,18 +160,6 @@
         NSString *emailBody = @"My cool image is attached";
         [picker setMessageBody:emailBody isHTML:NO];
         [self presentModalViewController:picker animated:YES];
-        
-        picker = nil;
-        
-        /*
-         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-         mailViewController.mailComposeDelegate = self;
-         [mailViewController setSubject:@\"Subject Goes Here.\"];
-         [mailViewController setMessageBody:@\"Your message goes here.\" isHTML:NO];
-         
-         [self presentModalViewController:mailViewController animated:YES];
-         mailViewController = nil;
-         */
     }
     else {
         

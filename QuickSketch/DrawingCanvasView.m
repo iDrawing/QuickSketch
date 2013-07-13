@@ -25,6 +25,7 @@
  SOFTWARE.
 */
 
+#import <QuartzCore/QuartzCore.h>
 #import "DrawingCanvasView.h"
 #import "iToast.h"
 
@@ -122,31 +123,30 @@
     lineWidth = lw;
 }
 
--(UIImage *) writeCanvasToJPG
+- (UIImage *)imageByRenderingView
 {
     CGSize imgsize = self.frame.size;
-    return nil;
-/*
-    CGSize imgsize = self.view.bounds;
+    //CGSize imgsize = self.view.bounds;
     UIGraphicsBeginImageContext(imgsize);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *NewImg = UIGraphicsGetImageFromCurrentImageContext();
+    //[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *canvasImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    NSData *imageData = UIImageJPEGRepresentation(NewImg,1);
-    NSString *fullPath = @"";   //Path of Document directory where u wish to save the image.
-    BOOL success = [mediaData writeToFile:fullPath atomically:YES];
+    return canvasImage;
+}
 
- If you need an image from the content of a UIView object (like a whole web page that is displayed in a UIWebView object) or even a complex hierarchy of UIView objects so you can save it as PNG or JPEG image or use it as thumbnail image, you can do this also with just a few lines of code…
- 
- UIView *view = ...;
- 
- CGSize size = [view bounds].size;
- UIGraphicsBeginImageContext(size);
- [[view layer] renderInContext:UIGraphicsGetCurrentContext()];
- UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
- UIGraphicsEndImageContext();
-
-*/
+-(NSString *) writeCanvasToJPG
+{
+    UIImage *canvasImage = [self imageByRenderingView];
+    NSData *imageData = UIImageJPEGRepresentation(canvasImage, 1);
+    // Store in cache directory and remove if email sent ok.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *fullPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"quickSketch.png"];
+    BOOL success = [imageData writeToFile:fullPath atomically:YES];
+    if (success == YES)
+        return fullPath;
+    else
+        return nil;
 }
 
 @end

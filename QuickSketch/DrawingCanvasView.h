@@ -41,6 +41,7 @@
 
 -(void) eraseCanvas;
 
--(UIImage *) writeCanvasToJPG;
+- (UIImage *)imageByRenderingView;
+-(NSString *) writeCanvasToJPG;
 
 @end
