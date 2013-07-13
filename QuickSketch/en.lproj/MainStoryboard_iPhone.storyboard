@@ -102,7 +102,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="yellowMarkerButtonActionUp:" destination="2" eventType="touchUpInside" id="ZsN-uu-1aX"/>
+                                    <action selector="yellowMarkerButtonActionUp:" destination="2" eventType="touchUpInside" id="TfI-3l-P4v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-eA-N9P">
@@ -118,6 +118,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="cameraRollButtonActionUp:" destination="2" eventType="touchUpInside" id="O0c-J7-3D8"/>
                                     <action selector="cameraRollSaveButtonActionUp:" destination="2" eventType="touchUpInside" id="6c7-Wr-36g"/>
                                 </connections>
                             </button>
@@ -176,6 +177,7 @@
                 <relationship kind="action" name="emailButtonActionUp:"/>
                 <relationship kind="action" name="eraserButtonActionUp:"/>
                 <relationship kind="action" name="redMarkerButtonActionUp:"/>
+                <relationship kind="action" name="yellowMarkerButtonActionUp:"/>
             </relationships>
         </class>
     </classes>

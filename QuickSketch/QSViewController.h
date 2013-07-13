@@ -14,10 +14,11 @@
     DrawingCanvasView *canvasView;
 }
 - (IBAction)emailButtonActionUp:(id)sender;
+- (IBAction)cameraRollButtonActionUp:(id)sender;
 - (IBAction)eraserButtonActionUp:(id)sender;
 - (IBAction)blackMarkerButtonActionUp:(id)sender;
 - (IBAction)redMarkerButtonActionUp:(id)sender;
 - (IBAction)blueMarkerButtonActionUp:(id)sender;
-- (IBAction)cameraRollButtonActionUp:(id)sender;
+- (IBAction)yellowMarkerButtonActionUp:(id)sender;
 
 @end
