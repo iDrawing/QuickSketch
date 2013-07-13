@@ -27,9 +27,10 @@
 
 #import <UIKit/UIKit.h>
 #import "DrawingCanvasView.h"
+#import "KSSheetView.h"
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface QSViewController : UIViewController <MFMailComposeViewControllerDelegate> {
+@interface QSViewController : UIViewController <MFMailComposeViewControllerDelegate, KSSheetViewDelegate> {
     
     DrawingCanvasView *canvasView;
 }

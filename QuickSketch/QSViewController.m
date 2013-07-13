@@ -55,6 +55,13 @@
     [super viewDidLoad];
 
     canvasView = (DrawingCanvasView *)self.view;
+
+    KSSheetView *sheet = [[KSSheetView alloc] initWithFrame:self.view.bounds];
+    sheet.cellSize = 20;
+    sheet.lineWidth = 1.0;
+    sheet.delegate = self;
+    //[self.view addSubview:sheet];
+    [self.view sendSubviewToBack:sheet];
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,7 +139,7 @@
         UIImage *coolImage = [canvasView writeCanvasToJPG];
         if (coolImage == nil)
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Problem converting Worksheet canvas to JPG." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Attachment Error" message: @"Problem converting Worksheet canvas to JPG." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
             return;
         }
@@ -162,28 +169,50 @@
     }
 }
 
+#pragma mark - MFMailComposeViewControllerDelegate
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     // Notifies users about errors associated with the interface
+    NSString *emailResult = nil;
     switch (result)
     {
         case MFMailComposeResultCancelled:
-            NSLog(@"Result: canceled");
+            emailResult = @"Result: canceled";
             break;
         case MFMailComposeResultSaved:
-            NSLog(@"Result: saved");
+            emailResult = @"Result: saved";
             break;
         case MFMailComposeResultSent:
-            NSLog(@"Result: sent");
+            emailResult = @"Result: sent";
             break;
         case MFMailComposeResultFailed:
-            NSLog(@"Result: failed");
+            emailResult = @"Result: failed";
             break;
         default:
-            NSLog(@"Result: not sent");
+            emailResult = @"Result: not sent";
             break;
     }
+
+    if (emailResult != nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email Message" message:emailResult delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - KSSheetViewDelegate
+
+- (void) drawInSheet:(KSSheetView *)sheetView inContext:(CGContextRef)context inRect:(CGRect)rect
+{
+    /*
+    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextFillRect(context, CGRectMake(100, 100, 80, 120));
+    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
+    CGContextFillRect(context, CGRectMake(200, 200, 100, 70));
+    */
 }
 
 @end

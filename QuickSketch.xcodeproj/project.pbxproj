@@ -29,6 +29,7 @@
 		D1EF35CE179127FB00652ACA /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35CD179127FB00652ACA /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D1EF35D217913EA200652ACA /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35D117913EA200652ACA /* ImageUtils.m */; };
 		D1EF35D41791422A00652ACA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF35D31791422A00652ACA /* MessageUI.framework */; };
+		D1EF35D81791449400652ACA /* KSSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35D71791449400652ACA /* KSSheetView.m */; };
 		D1FD7EFF179106BD00BE6D74 /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */; };
 		D1FD7F01179106C600BE6D74 /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F00179106C600BE6D74 /* icon-114x114.png */; };
 		D1FD7F03179106E800BE6D74 /* icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F02179106E800BE6D74 /* icon-72x72.png */; };
@@ -67,6 +68,9 @@
 		D1EF35D017913EA200652ACA /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
 		D1EF35D117913EA200652ACA /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
 		D1EF35D31791422A00652ACA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D1EF35D61791449400652ACA /* KSSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSheetView.h; sourceTree = "<group>"; };
+		D1EF35D71791449400652ACA /* KSSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSheetView.m; sourceTree = "<group>"; };
+		D1EF35D9179144C800652ACA /* ARCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCHelper.h; sourceTree = "<group>"; };
 		D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57x57.png"; sourceTree = "<group>"; };
 		D1FD7F00179106C600BE6D74 /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114x114.png"; sourceTree = "<group>"; };
 		D1FD7F02179106E800BE6D74 /* icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72x72.png"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		D14143B5178FEE8000C84510 /* QuickSketch */ = {
 			isa = PBXGroup;
 			children = (
+				D1EF35D51791449400652ACA /* KSSheetView */,
 				D1EF35CF17913EA200652ACA /* ImageUtils */,
 				D1EF35CB179127FB00652ACA /* iToast */,
 				D14143D8178FF63700C84510 /* Resources */,
@@ -184,6 +189,16 @@
 				D1EF35D117913EA200652ACA /* ImageUtils.m */,
 			);
 			path = ImageUtils;
+			sourceTree = "<group>";
+		};
+		D1EF35D51791449400652ACA /* KSSheetView */ = {
+			isa = PBXGroup;
+			children = (
+				D1EF35D9179144C800652ACA /* ARCHelper.h */,
+				D1EF35D61791449400652ACA /* KSSheetView.h */,
+				D1EF35D71791449400652ACA /* KSSheetView.m */,
+			);
+			path = KSSheetView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +286,7 @@
 				D14143D7178FEFA900C84510 /* DrawingCanvasView.m in Sources */,
 				D1EF35CE179127FB00652ACA /* iToast.m in Sources */,
 				D1EF35D217913EA200652ACA /* ImageUtils.m in Sources */,
+				D1EF35D81791449400652ACA /* KSSheetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
