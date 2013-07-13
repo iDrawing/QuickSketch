@@ -12,6 +12,7 @@
         allPaths = [[NSMutableArray alloc] init];
         pathColors = [[NSMutableArray alloc] init];
         pathWidth = [[NSMutableArray alloc] init];
+        lineWidth = 2.0;
         [self setMultipleTouchEnabled:NO];
         [self setBackgroundColor:[UIColor whiteColor]];
         currentStrokeColor = [UIColor blackColor];

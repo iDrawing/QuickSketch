@@ -51,6 +51,12 @@
     [canvasView setPathLineWidth:2.0];
 }
 
+- (IBAction)yellowMarkerButtonActionUp:(id)sender {
+
+    [canvasView setStrokeColor:[UIColor yellowColor]];
+    [canvasView setPathLineWidth:2.0];
+}
+
 - (IBAction)emailButtonActionUp:(id)sender
 {
     

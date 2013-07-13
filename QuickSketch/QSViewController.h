@@ -18,5 +18,6 @@
 - (IBAction)blackMarkerButtonActionUp:(id)sender;
 - (IBAction)redMarkerButtonActionUp:(id)sender;
 - (IBAction)blueMarkerButtonActionUp:(id)sender;
+- (IBAction)yellowMarkerButtonActionUp:(id)sender;
 
 @end
