@@ -112,7 +112,78 @@
 
 - (IBAction)emailButtonActionUp:(id)sender
 {
-    
+    if ([MFMailComposeViewController canSendMail])
+    {
+        
+        MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+        picker.mailComposeDelegate = self;
+        [picker setSubject:@"Check out this image!"];
+        
+        // Set up recipients
+        // NSArray *toRecipients = [NSArray arrayWithObject:@"first@example.com"];
+        // NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
+        // NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@example.com"];
+        
+        // [picker setToRecipients:toRecipients];
+        // [picker setCcRecipients:ccRecipients];
+        // [picker setBccRecipients:bccRecipients];
+        
+        // Attach an image to the email
+        UIImage *coolImage = [canvasView writeCanvasToJPG];
+        if (coolImage == nil)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Problem converting Worksheet canvas to JPG." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+        NSData *myData = UIImagePNGRepresentation(coolImage);
+        [picker addAttachmentData:myData mimeType:@"image/png" fileName:@"coolImage.png"];
+        
+        // Fill out the email body text
+        NSString *emailBody = @"My cool image is attached";
+        [picker setMessageBody:emailBody isHTML:NO];
+        [self presentModalViewController:picker animated:YES];
+        
+        picker = nil;
+        
+        /*
+         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+         mailViewController.mailComposeDelegate = self;
+         [mailViewController setSubject:@\"Subject Goes Here.\"];
+         [mailViewController setMessageBody:@\"Your message goes here.\" isHTML:NO];
+         
+         [self presentModalViewController:mailViewController animated:YES];
+         mailViewController = nil;
+         */
+    }
+    else {
+        
+        NSLog(@"Device is unable to send email in its current state.");
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    // Notifies users about errors associated with the interface
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Result: canceled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Result: saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Result: sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Result: failed");
+            break;
+        default:
+            NSLog(@"Result: not sent");
+            break;
+    }
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

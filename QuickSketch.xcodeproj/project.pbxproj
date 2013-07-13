@@ -27,6 +27,8 @@
 		D181F8A01790BDFB005371FD /* email_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D181F89F1790BDFB005371FD /* email_button.png */; };
 		D1EF35CA1791241400652ACA /* marker_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = D1EF35C91791241400652ACA /* marker_yellow.png */; };
 		D1EF35CE179127FB00652ACA /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35CD179127FB00652ACA /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1EF35D217913EA200652ACA /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35D117913EA200652ACA /* ImageUtils.m */; };
+		D1EF35D41791422A00652ACA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF35D31791422A00652ACA /* MessageUI.framework */; };
 		D1FD7EFF179106BD00BE6D74 /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */; };
 		D1FD7F01179106C600BE6D74 /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F00179106C600BE6D74 /* icon-114x114.png */; };
 		D1FD7F03179106E800BE6D74 /* icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F02179106E800BE6D74 /* icon-72x72.png */; };
@@ -62,6 +64,9 @@
 		D1EF35C91791241400652ACA /* marker_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_yellow.png; path = Resources/marker_yellow.png; sourceTree = "<group>"; };
 		D1EF35CC179127FB00652ACA /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
 		D1EF35CD179127FB00652ACA /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		D1EF35D017913EA200652ACA /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
+		D1EF35D117913EA200652ACA /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
+		D1EF35D31791422A00652ACA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57x57.png"; sourceTree = "<group>"; };
 		D1FD7F00179106C600BE6D74 /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114x114.png"; sourceTree = "<group>"; };
 		D1FD7F02179106E800BE6D74 /* icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72x72.png"; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1EF35D41791422A00652ACA /* MessageUI.framework in Frameworks */,
 				D14143B0178FEE8000C84510 /* UIKit.framework in Frameworks */,
 				D14143B2178FEE8000C84510 /* Foundation.framework in Frameworks */,
 				D14143B4178FEE8000C84510 /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +92,7 @@
 		D14143A3178FEE8000C84510 = {
 			isa = PBXGroup;
 			children = (
+				D1EF35D31791422A00652ACA /* MessageUI.framework */,
 				D1FD7F04179106F000BE6D74 /* icon-144x144.png */,
 				D1FD7F02179106E800BE6D74 /* icon-72x72.png */,
 				D1FD7F00179106C600BE6D74 /* icon-114x114.png */,
@@ -117,6 +124,7 @@
 		D14143B5178FEE8000C84510 /* QuickSketch */ = {
 			isa = PBXGroup;
 			children = (
+				D1EF35CF17913EA200652ACA /* ImageUtils */,
 				D1EF35CB179127FB00652ACA /* iToast */,
 				D14143D8178FF63700C84510 /* Resources */,
 				D14143D5178FEFA900C84510 /* DrawingCanvasView.h */,
@@ -167,6 +175,15 @@
 				D1EF35CD179127FB00652ACA /* iToast.m */,
 			);
 			path = iToast;
+			sourceTree = "<group>";
+		};
+		D1EF35CF17913EA200652ACA /* ImageUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D1EF35D017913EA200652ACA /* ImageUtils.h */,
+				D1EF35D117913EA200652ACA /* ImageUtils.m */,
+			);
+			path = ImageUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +270,7 @@
 				D14143CF178FEE8000C84510 /* QSViewController.m in Sources */,
 				D14143D7178FEFA900C84510 /* DrawingCanvasView.m in Sources */,
 				D1EF35CE179127FB00652ACA /* iToast.m in Sources */,
+				D1EF35D217913EA200652ACA /* ImageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -91,11 +91,7 @@
 }
 
 -(void) eraseCanvas
-{
-    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Device Shaked" message: @"Clear screen" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    //[alert show];
-    //- See more at: http://getsetgames.com/2009/12/02/iphonedev-advent-tip-2-how-to-show-an-alert-with-uialertview/#sthash.v0zLr5is.dpuf
-    
+{    
     [[iToast makeText:NSLocalizedString(@"Shaking device erases whiteboard.", @"")] show];
 
     allPaths = nil;
@@ -123,6 +119,33 @@
 -(void) setPathLineWidth:(float)lw
 {
     lineWidth = lw;
+}
+
+-(UIImage *) writeCanvasToJPG
+{
+    CGSize imgsize = self.frame.size;
+    return nil;
+/*
+    CGSize imgsize = self.view.bounds;
+    UIGraphicsBeginImageContext(imgsize);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *NewImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    NSData *imageData = UIImageJPEGRepresentation(NewImg,1);
+    NSString *fullPath = @"";   //Path of Document directory where u wish to save the image.
+    BOOL success = [mediaData writeToFile:fullPath atomically:YES];
+
+ If you need an image from the content of a UIView object (like a whole web page that is displayed in a UIWebView object) or even a complex hierarchy of UIView objects so you can save it as PNG or JPEG image or use it as thumbnail image, you can do this also with just a few lines of code…
+ 
+ UIView *view = ...;
+ 
+ CGSize size = [view bounds].size;
+ UIGraphicsBeginImageContext(size);
+ [[view layer] renderInContext:UIGraphicsGetCurrentContext()];
+ UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+ UIGraphicsEndImageContext();
+
+*/
 }
 
 @end

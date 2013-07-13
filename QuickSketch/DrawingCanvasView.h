@@ -41,4 +41,6 @@
 
 -(void) eraseCanvas;
 
+-(UIImage *) writeCanvasToJPG;
+
 @end
