@@ -36,8 +36,8 @@
     pathColors = [[NSMutableArray alloc] init];
     pathWidth = [[NSMutableArray alloc] init];
     [self setMultipleTouchEnabled:NO];
-    [self setBackgroundColor:[UIColor clearColor]];
-    //[self setBackgroundColor:[UIColor whiteColor]];
+    //[self setBackgroundColor:[UIColor clearColor]];
+    [self setBackgroundColor:[UIColor whiteColor]];
     [self setStrokeColor:[UIColor blackColor]];
     [self setPathLineWidth:2.0];
 }
