@@ -19,5 +19,6 @@
 - (IBAction)redMarkerButtonActionUp:(id)sender;
 - (IBAction)blueMarkerButtonActionUp:(id)sender;
 - (IBAction)yellowMarkerButtonActionUp:(id)sender;
+- (IBAction)cameraRollSaveButtonActionUp:(id)sender;
 
 @end

@@ -57,6 +57,9 @@
     [canvasView setPathLineWidth:2.0];
 }
 
+- (IBAction)cameraRollSaveButtonActionUp:(id)sender {
+}
+
 - (IBAction)emailButtonActionUp:(id)sender
 {
     

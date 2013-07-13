@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D1396CA51790D6D7005EC47B /* marker_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = D1396CA41790D6D7005EC47B /* marker_yellow.png */; };
+		D1396CA71790DB2D005EC47B /* camera_roll.png in Resources */ = {isa = PBXBuildFile; fileRef = D1396CA61790DB2D005EC47B /* camera_roll.png */; };
 		D14143B0178FEE8000C84510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14143AF178FEE8000C84510 /* UIKit.framework */; };
 		D14143B2178FEE8000C84510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14143B1178FEE8000C84510 /* Foundation.framework */; };
 		D14143B4178FEE8000C84510 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14143B3178FEE8000C84510 /* CoreGraphics.framework */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		D1396CA41790D6D7005EC47B /* marker_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_yellow.png; path = Resources/marker_yellow.png; sourceTree = "<group>"; };
+		D1396CA61790DB2D005EC47B /* camera_roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_roll.png; path = Resources/camera_roll.png; sourceTree = "<group>"; };
 		D14143AC178FEE8000C84510 /* QuickSketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickSketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14143AF178FEE8000C84510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D14143B1178FEE8000C84510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +133,7 @@
 		D14143D8178FF63700C84510 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D1396CA61790DB2D005EC47B /* camera_roll.png */,
 				D1396CA41790D6D7005EC47B /* marker_yellow.png */,
 				D181F89F1790BDFB005371FD /* email_button.png */,
 				D14143D9178FF68800C84510 /* eraser.png */,
@@ -205,6 +208,7 @@
 				D14143E0178FF68800C84510 /* marker_red.png in Resources */,
 				D181F8A01790BDFB005371FD /* email_button.png in Resources */,
 				D1396CA51790D6D7005EC47B /* marker_yellow.png in Resources */,
+				D1396CA71790DB2D005EC47B /* camera_roll.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
