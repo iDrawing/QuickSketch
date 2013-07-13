@@ -26,6 +26,7 @@
 */
 
 #import "DrawingCanvasView.h"
+#import "iToast.h"
 
 @implementation DrawingCanvasView
 
@@ -91,11 +92,12 @@
 
 -(void) eraseCanvas
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Device Shaked" message: @"Clear screen" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-    
+    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Device Shaked" message: @"Clear screen" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    //[alert show];
     //- See more at: http://getsetgames.com/2009/12/02/iphonedev-advent-tip-2-how-to-show-an-alert-with-uialertview/#sthash.v0zLr5is.dpuf
     
+    [[iToast makeText:NSLocalizedString(@"Shaking device erases whiteboard.", @"")] show];
+
     allPaths = nil;
     pathColors = nil;
     pathWidth = nil;
