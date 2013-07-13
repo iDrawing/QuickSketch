@@ -1,9 +1,6 @@
 #import "DrawingCanvasView.h"
 
 @implementation DrawingCanvasView
-{
-    //UIBezierPath *path;
-}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
