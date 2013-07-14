@@ -126,6 +126,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wKw-u9-0h2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DZ3-wi-mu2"/>
+                            <constraint firstItem="zOb-dn-P4G" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="NR7-UI-gt5"/>
                             <constraint firstAttribute="bottom" secondItem="wKw-u9-0h2" secondAttribute="bottom" constant="75" id="NX2-Bz-M2P"/>
                             <constraint firstAttribute="trailing" secondItem="ddg-xc-4Co" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NcA-vt-bYc"/>
                             <constraint firstItem="6WO-ID-VES" firstAttribute="leading" secondItem="zOb-dn-P4G" secondAttribute="leading" type="user" id="OV1-WK-LrP"/>
@@ -137,7 +138,6 @@
                             <constraint firstItem="m0P-eA-N9P" firstAttribute="leading" secondItem="zOb-dn-P4G" secondAttribute="leading" type="default" id="asW-Xa-z9t"/>
                             <constraint firstAttribute="trailing" secondItem="qPt-pD-t0a" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hbt-KZ-a2N"/>
                             <constraint firstAttribute="trailing" secondItem="6WO-ID-VES" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jPH-VA-mCd"/>
-                            <constraint firstItem="zOb-dn-P4G" firstAttribute="top" secondItem="3" secondAttribute="top" constant="168" id="k71-O0-9vV"/>
                             <constraint firstItem="m0P-eA-N9P" firstAttribute="top" secondItem="hQY-x6-sTP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kyS-HK-nZr"/>
                             <constraint firstItem="hQY-x6-sTP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="14" id="mqo-dI-5gb"/>
                             <constraint firstItem="6WO-ID-VES" firstAttribute="leading" secondItem="ddg-xc-4Co" secondAttribute="leading" type="user" id="qDW-R2-k3F"/>
