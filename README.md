@@ -1,4 +1,4 @@
 QuickSketch
 ===========
 
-QuickSketch is an idea sketcher that give you a the ability to sketch in 3 colors and add to camera roll or email it to a friend
+The idea sketcher that gives you the ability to sketch in multiple colors and add it to camera roll or email it to a friend.
