@@ -31,6 +31,13 @@
 
 @implementation DrawingCanvasView
 
+@synthesize cellSize;
+@synthesize offset;
+@synthesize lineWidth;
+
+@synthesize gridWidth;
+@synthesize gridHeight;
+
 -(void) initCanvas
 {
     allPaths = [[NSMutableArray alloc] init];
@@ -47,6 +54,27 @@
 {
     if (self = [super initWithCoder:aDecoder])
     {
+        bGridOn = NO;
+        paperColor = CGColorCreateCopy([UIColor whiteColor].CGColor);
+        lineColor = CGColorCreateCopy([UIColor colorWithRed:0.48
+                                                      green:0.73
+                                                       blue:0.96
+                                                      alpha:1.0].CGColor);
+        
+        // default
+        self.cellSize = self.frame.size.width / 12;
+        self.offset = CGPointMake((self.frame.size.width - cellSize * gridWidth) / 2,
+                                  (self.frame.size.height - cellSize * gridHeight) / 2);
+        self.lineWidth = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 2.0 : 1.0);
+
+        /*
+        KSSheetView *sheet = [[KSSheetView alloc] initWithFrame:self.view.bounds];
+        sheet.cellSize = 20;
+        sheet.lineWidth = 1.0;
+        sheet.delegate = self;
+        //[self.view addSubview:sheet];
+        [self.view sendSubviewToBack:sheet];
+        */
         [self initCanvas];
     }
     return self;
@@ -57,10 +85,59 @@
     allPaths = nil;
     pathColors = nil;
     pathWidth = nil;
+    
+    CGColorRelease(paperColor);
+    CGColorRelease(lineColor);
+}
+
+- (void) setCellSize:(NSUInteger)aCellSize
+{
+    cellSize = aCellSize;
+    
+    // dependent ivars
+    gridWidth = self.frame.size.width / cellSize;
+    gridHeight = self.frame.size.height / cellSize;
 }
 
 - (void)drawRect:(CGRect)rect
 {
+    if (bGridOn)
+    {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        // paper color
+        CGContextSetFillColorWithColor(context, paperColor);
+        CGContextFillRect(context, rect);
+        
+        // grid color
+        CGContextSetStrokeColorWithColor(context, lineColor);
+        CGContextSetLineWidth(context, lineWidth);
+        
+        CGPoint delta;
+        
+        // horizontal lines
+        delta.y = offset.y;
+        while (delta.y < rect.size.height) {
+            CGContextBeginPath(context);
+            CGContextMoveToPoint(context, rect.origin.x, rect.origin.y + delta.y);
+            CGContextAddLineToPoint(context, rect.origin.x + rect.size.width, rect.origin.y + delta.y);
+            CGContextStrokePath(context);
+            
+            delta.y += cellSize;
+        }
+        
+        // vertical lines
+        delta.x = offset.x;
+        while (delta.x < rect.size.width) {
+            CGContextBeginPath(context);
+            CGContextMoveToPoint(context, rect.origin.x + delta.x, rect.origin.y);
+            CGContextAddLineToPoint(context, rect.origin.x + delta.x, rect.origin.y + rect.size.height);
+            CGContextStrokePath(context);
+            
+            delta.x += cellSize;
+        }
+    }
+    
     int count = 0;
     for(UIBezierPath *path in allPaths)
     {

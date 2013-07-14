@@ -34,6 +34,11 @@
     NSMutableArray *pathWidth;
     UIColor *currentStrokeColor;
     float lineWidth;
+    
+    // Handles Grid
+    BOOL bGridOn;
+    CGColorRef paperColor;
+    CGColorRef lineColor;
 }
 
 -(void) setStrokeColor:(UIColor *)color;
@@ -43,5 +48,14 @@
 
 - (UIImage *)imageByRenderingView;
 -(NSString *) writeCanvasToJPG;
+
+// Grid drawing
+@property (nonatomic, assign) NSUInteger cellSize;
+@property (nonatomic, assign) CGPoint offset;
+@property (nonatomic, assign) CGFloat lineWidth;
+
+// derived from cellSize
+@property (nonatomic, readonly) NSUInteger gridWidth;
+@property (nonatomic, readonly) NSUInteger gridHeight;
 
 @end

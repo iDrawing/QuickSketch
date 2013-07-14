@@ -55,13 +55,6 @@
     [super viewDidLoad];
 
     canvasView = (DrawingCanvasView *)self.view;
-
-    KSSheetView *sheet = [[KSSheetView alloc] initWithFrame:self.view.bounds];
-    sheet.cellSize = 20;
-    sheet.lineWidth = 1.0;
-    sheet.delegate = self;
-    //[self.view addSubview:sheet];
-    [self.view sendSubviewToBack:sheet];
 }
 
 - (void)didReceiveMemoryWarning
@@ -199,18 +192,6 @@
     }
 
     [self dismissModalViewControllerAnimated:YES];
-}
-
-#pragma mark - KSSheetViewDelegate
-
-- (void) drawInSheet:(KSSheetView *)sheetView inContext:(CGContextRef)context inRect:(CGRect)rect
-{
-    /*
-    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
-    CGContextFillRect(context, CGRectMake(100, 100, 80, 120));
-    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
-    CGContextFillRect(context, CGRectMake(200, 200, 100, 70));
-    */
 }
 
 @end
