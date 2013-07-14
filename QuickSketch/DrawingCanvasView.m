@@ -167,6 +167,7 @@
 -(void) gridOutlineState:(BOOL)state
 {
     bGridOn = state;
+    [self setNeedsDisplay];
 }
 
 -(void) eraseCanvas

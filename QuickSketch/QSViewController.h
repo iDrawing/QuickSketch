@@ -32,7 +32,11 @@
 @interface QSViewController : UIViewController <MFMailComposeViewControllerDelegate> {
     
     DrawingCanvasView *canvasView;
+    BOOL bGridMode;
 }
+
+@property (strong, nonatomic) IBOutlet UIButton *backgroundButton;
+
 - (IBAction)emailButtonActionUp:(id)sender;
 - (IBAction)cameraRollButtonActionUp:(id)sender;
 - (IBAction)eraserButtonActionUp:(id)sender;
@@ -40,5 +44,6 @@
 - (IBAction)redMarkerButtonActionUp:(id)sender;
 - (IBAction)blueMarkerButtonActionUp:(id)sender;
 - (IBAction)yellowMarkerButtonActionUp:(id)sender;
+- (IBAction)canvasBackgroundActionUp:(id)sender;
 
 @end

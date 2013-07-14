@@ -55,6 +55,7 @@
     [super viewDidLoad];
 
     canvasView = (DrawingCanvasView *)self.view;
+    bGridMode = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,6 +106,21 @@
     [canvasView setPathLineWidth:2.0];
 }
 
+- (IBAction)canvasBackgroundActionUp:(id)sender {
+    
+    if (bGridMode == NO)
+    {
+        bGridMode = YES;
+        [canvasView gridOutlineState:YES];
+        [_backgroundButton setImage:[UIImage imageNamed:@"grid.png"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        bGridMode = NO;
+        [canvasView gridOutlineState:NO];
+        [_backgroundButton setImage:[UIImage imageNamed:@"whiteboard.png"] forState:UIControlStateNormal];
+    }
+}
 
 - (IBAction)cameraRollButtonActionUp:(id)sender
 {

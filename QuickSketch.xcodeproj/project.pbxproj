@@ -29,6 +29,8 @@
 		D1EF35CE179127FB00652ACA /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF35CD179127FB00652ACA /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D1EF35D41791422A00652ACA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF35D31791422A00652ACA /* MessageUI.framework */; };
 		D1EF35DE17914D5D00652ACA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF35DD17914D5D00652ACA /* QuartzCore.framework */; };
+		D1EF35E117925FBC00652ACA /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = D1EF35DF17925FBC00652ACA /* grid.png */; };
+		D1EF35E217925FBC00652ACA /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D1EF35E017925FBC00652ACA /* whiteboard.png */; };
 		D1FD7EFF179106BD00BE6D74 /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */; };
 		D1FD7F01179106C600BE6D74 /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F00179106C600BE6D74 /* icon-114x114.png */; };
 		D1FD7F03179106E800BE6D74 /* icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FD7F02179106E800BE6D74 /* icon-72x72.png */; };
@@ -66,6 +68,8 @@
 		D1EF35CD179127FB00652ACA /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
 		D1EF35D31791422A00652ACA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D1EF35DD17914D5D00652ACA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D1EF35DF17925FBC00652ACA /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grid.png; path = Resources/grid.png; sourceTree = "<group>"; };
+		D1EF35E017925FBC00652ACA /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteboard.png; path = Resources/whiteboard.png; sourceTree = "<group>"; };
 		D1FD7EFE179106BD00BE6D74 /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57x57.png"; sourceTree = "<group>"; };
 		D1FD7F00179106C600BE6D74 /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114x114.png"; sourceTree = "<group>"; };
 		D1FD7F02179106E800BE6D74 /* icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72x72.png"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		D14143D8178FF63700C84510 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D1EF35DF17925FBC00652ACA /* grid.png */,
+				D1EF35E017925FBC00652ACA /* whiteboard.png */,
 				D1EF35C91791241400652ACA /* marker_yellow.png */,
 				D1FD7F061791076C00BE6D74 /* camera_roll.png */,
 				D181F89F1790BDFB005371FD /* email_button.png */,
@@ -246,6 +252,8 @@
 				D1FD7F05179106F000BE6D74 /* icon-144x144.png in Resources */,
 				D1FD7F071791076C00BE6D74 /* camera_roll.png in Resources */,
 				D1EF35CA1791241400652ACA /* marker_yellow.png in Resources */,
+				D1EF35E117925FBC00652ACA /* grid.png in Resources */,
+				D1EF35E217925FBC00652ACA /* whiteboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
