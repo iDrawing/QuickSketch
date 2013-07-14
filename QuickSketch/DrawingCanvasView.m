@@ -33,7 +33,7 @@
 
 @synthesize cellSize;
 @synthesize offset;
-@synthesize lineWidth;
+@synthesize gridLineWidth;
 
 @synthesize gridWidth;
 @synthesize gridHeight;
@@ -44,7 +44,6 @@
     pathColors = [[NSMutableArray alloc] init];
     pathWidth = [[NSMutableArray alloc] init];
     [self setMultipleTouchEnabled:NO];
-    //[self setBackgroundColor:[UIColor clearColor]];
     [self setBackgroundColor:[UIColor whiteColor]];
     [self setStrokeColor:[UIColor blackColor]];
     [self setPathLineWidth:2.0];
@@ -65,16 +64,12 @@
         self.cellSize = self.frame.size.width / 12;
         self.offset = CGPointMake((self.frame.size.width - cellSize * gridWidth) / 2,
                                   (self.frame.size.height - cellSize * gridHeight) / 2);
-        self.lineWidth = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 2.0 : 1.0);
+        self.gridLineWidth = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 2.0 : 1.0);
 
-        /*
-        KSSheetView *sheet = [[KSSheetView alloc] initWithFrame:self.view.bounds];
-        sheet.cellSize = 20;
-        sheet.lineWidth = 1.0;
-        sheet.delegate = self;
-        //[self.view addSubview:sheet];
-        [self.view sendSubviewToBack:sheet];
-        */
+        // This is from init settings I liked for grid
+        self.cellSize = 20;
+        self.gridLineWidth = 1.0;
+
         [self initCanvas];
     }
     return self;
@@ -111,7 +106,7 @@
         
         // grid color
         CGContextSetStrokeColorWithColor(context, lineColor);
-        CGContextSetLineWidth(context, lineWidth);
+        CGContextSetLineWidth(context, gridLineWidth);
         
         CGPoint delta;
         
@@ -167,6 +162,11 @@
     UITouch *mytouch = [[touches allObjects] objectAtIndex:0];
     [path addLineToPoint:[mytouch locationInView:self]];
     [self setNeedsDisplay];
+}
+
+-(void) gridOutlineState:(BOOL)state
+{
+    bGridOn = state;
 }
 
 -(void) eraseCanvas

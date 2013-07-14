@@ -46,13 +46,15 @@
 
 -(void) eraseCanvas;
 
+-(void) gridOutlineState:(BOOL)state;
+
 - (UIImage *)imageByRenderingView;
 -(NSString *) writeCanvasToJPG;
 
 // Grid drawing
 @property (nonatomic, assign) NSUInteger cellSize;
 @property (nonatomic, assign) CGPoint offset;
-@property (nonatomic, assign) CGFloat lineWidth;
+@property (nonatomic, assign) CGFloat gridLineWidth;
 
 // derived from cellSize
 @property (nonatomic, readonly) NSUInteger gridWidth;
