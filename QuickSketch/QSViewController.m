@@ -112,13 +112,13 @@
     {
         bGridMode = YES;
         [canvasView gridOutlineState:YES];
-        [_backgroundButton setImage:[UIImage imageNamed:@"grid.png"] forState:UIControlStateNormal];
+        [_backgroundButton setImage:[UIImage imageNamed:@"whiteboard.png"] forState:UIControlStateNormal];
     }
     else
     {
         bGridMode = NO;
         [canvasView gridOutlineState:NO];
-        [_backgroundButton setImage:[UIImage imageNamed:@"whiteboard.png"] forState:UIControlStateNormal];
+        [_backgroundButton setImage:[UIImage imageNamed:@"grid.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -131,7 +131,9 @@
         [alert show];
     }
     else
+    {        
         UIImageWriteToSavedPhotosAlbum(canvasImage, nil, nil, nil);
+    }
 }
 
 - (IBAction)emailButtonActionUp:(id)sender

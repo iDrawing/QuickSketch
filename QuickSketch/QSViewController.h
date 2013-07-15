@@ -37,6 +37,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *backgroundButton;
 
+
 - (IBAction)emailButtonActionUp:(id)sender;
 - (IBAction)cameraRollButtonActionUp:(id)sender;
 - (IBAction)eraserButtonActionUp:(id)sender;
