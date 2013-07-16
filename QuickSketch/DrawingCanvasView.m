@@ -219,7 +219,7 @@
     NSData *imageData = UIImageJPEGRepresentation(canvasImage, 1);
     // Store in cache directory and remove if email sent ok.
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *fullPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"quickSketch.png"];
+    NSString *fullPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"quickSketch.jpg"];
     BOOL success = [imageData writeToFile:fullPath atomically:YES];
     if (success == YES)
         return fullPath;

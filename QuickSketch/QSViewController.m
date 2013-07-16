@@ -129,17 +129,8 @@
 - (IBAction)cameraRollButtonActionUp:(id)sender
 {
     // Hide everything before take a snap shoot of canvas
-    _backgroundButton.hidden = YES;
-    _emailButton.hidden = YES;
-    _cameraRollButton.hidden = YES;
-    _eraserButton.hidden = YES;
-    _blackMarkerButton.hidden = YES;
-    _redMarkerButton.hidden = YES;
-    _blueMarkerButton.hidden = YES;
-    _yellowMarkerButton.hidden = YES;
+    [self hideCanvasControls];
     
-    _createdByQuickSketchImage.hidden = NO;
-
     UIImage *canvasImage = [canvasView imageByRenderingView];
     if (canvasImage == nil)
     {
@@ -152,16 +143,7 @@
     }
     
     // Put it all back
-    _createdByQuickSketchImage.hidden = YES;
-    
-    _backgroundButton.hidden = NO;
-    _emailButton.hidden = NO;
-    _cameraRollButton.hidden = NO;
-    _eraserButton.hidden = NO;
-    _blackMarkerButton.hidden = NO;
-    _redMarkerButton.hidden = NO;
-    _blueMarkerButton.hidden = NO;
-    _yellowMarkerButton.hidden = NO;
+    [self showCanvasControls];
 }
 
 - (void)thisImage:(UIImage *)image hasBeenSavedInPhotoAlbumWithError:(NSError *)error usingContextInfo:(void*)ctxInfo
@@ -179,7 +161,7 @@
         
         MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
         picker.mailComposeDelegate = self;
-        [picker setSubject:@"Check out this image!"];
+        [picker setSubject:@"Check out this QuickSketch"];
         
         // Set up recipients
         // NSArray *toRecipients = [NSArray arrayWithObject:@"first@example.com"];
@@ -191,6 +173,7 @@
         // [picker setBccRecipients:bccRecipients];
         
         // Attach an image to the email
+        /*
         NSString *canvasImagePath = [canvasView writeCanvasToJPG];
         if (canvasImagePath == nil)
         {
@@ -198,19 +181,21 @@
             [alert show];
             return;
         }
-
+        */
+        [self hideCanvasControls];
         UIImage *coolImage = [canvasView imageByRenderingView];
-        NSData *myData = UIImagePNGRepresentation(coolImage);
-        [picker addAttachmentData:myData mimeType:@"image/png" fileName:@"coolImage.png"];
+        [self showCanvasControls];
+        NSData *canvasData = UIImagePNGRepresentation(coolImage);
+        [picker addAttachmentData:canvasData mimeType:@"image/png" fileName:@"quickSketch.png"];
         
         // Fill out the email body text
-        NSString *emailBody = @"My cool image is attached";
+        NSString *emailBody = @"Attached is a image created using QuickSketch";
         [picker setMessageBody:emailBody isHTML:NO];
         [self presentModalViewController:picker animated:YES];
     }
     else {
         
-        NSLog(@"Device is unable to send email in its current state.");
+        [[iToast makeText:NSLocalizedString(@"Device is unable to send email in its current state.", @"")] show];
     }
 }
 
@@ -246,6 +231,34 @@
     }
 
     [self dismissModalViewControllerAnimated:YES];
+}
+
+-(void) hideCanvasControls
+{
+    _backgroundButton.hidden = YES;
+    _emailButton.hidden = YES;
+    _cameraRollButton.hidden = YES;
+    _eraserButton.hidden = YES;
+    _blackMarkerButton.hidden = YES;
+    _redMarkerButton.hidden = YES;
+    _blueMarkerButton.hidden = YES;
+    _yellowMarkerButton.hidden = YES;
+    
+    _createdByQuickSketchImage.hidden = NO;
+}
+
+-(void) showCanvasControls
+{
+    _createdByQuickSketchImage.hidden = YES;
+    
+    _backgroundButton.hidden = NO;
+    _emailButton.hidden = NO;
+    _cameraRollButton.hidden = NO;
+    _eraserButton.hidden = NO;
+    _blackMarkerButton.hidden = NO;
+    _redMarkerButton.hidden = NO;
+    _blueMarkerButton.hidden = NO;
+    _yellowMarkerButton.hidden = NO;
 }
 
 @end
