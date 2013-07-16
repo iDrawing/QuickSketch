@@ -143,7 +143,6 @@
                         <constraints>
                             <constraint firstItem="wKw-u9-0h2" firstAttribute="top" secondItem="ddg-xc-4Co" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4RG-dQ-yTK"/>
                             <constraint firstItem="zOb-dn-P4G" firstAttribute="trailing" secondItem="iZc-XI-h6A" secondAttribute="trailing" type="default" id="9JU-B0-BSZ"/>
-                            <constraint firstAttribute="bottom" secondItem="xyn-TJ-2BB" secondAttribute="bottom" constant="32" id="BTG-Ou-fMy"/>
                             <constraint firstItem="iZc-XI-h6A" firstAttribute="top" secondItem="3" secondAttribute="top" constant="123" id="JpC-PX-srB"/>
                             <constraint firstItem="ddg-xc-4Co" firstAttribute="top" secondItem="6WO-ID-VES" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KOV-8o-FIw"/>
                             <constraint firstItem="zOb-dn-P4G" firstAttribute="leading" secondItem="iZc-XI-h6A" secondAttribute="leading" type="default" id="Kbx-Zq-x6b"/>
@@ -154,6 +153,7 @@
                             <constraint firstItem="ddg-xc-4Co" firstAttribute="trailing" secondItem="wKw-u9-0h2" secondAttribute="trailing" type="default" id="R4y-4M-Gwz"/>
                             <constraint firstItem="wKw-u9-0h2" firstAttribute="leading" secondItem="ddg-xc-4Co" secondAttribute="leading" type="default" id="Usp-E2-YI9"/>
                             <constraint firstItem="qPt-pD-t0a" firstAttribute="leading" secondItem="wKw-u9-0h2" secondAttribute="leading" type="default" id="Vd6-NO-3Bt"/>
+                            <constraint firstItem="ddg-xc-4Co" firstAttribute="top" secondItem="xyn-TJ-2BB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Vsh-BZ-Fa5"/>
                             <constraint firstItem="xyn-TJ-2BB" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Vz6-aZ-eXR"/>
                             <constraint firstItem="hQY-x6-sTP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="Yqf-px-LyQ"/>
                             <constraint firstItem="wKw-u9-0h2" firstAttribute="trailing" secondItem="qPt-pD-t0a" secondAttribute="trailing" type="default" id="cFb-yF-40A"/>
