@@ -36,8 +36,17 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *backgroundButton;
+@property (strong, nonatomic) IBOutlet UIButton *emailButton;
+@property (strong, nonatomic) IBOutlet UIButton *cameraRollButton;
+@property (strong, nonatomic) IBOutlet UIButton *eraserButton;
+@property (strong, nonatomic) IBOutlet UIButton *blackMarkerButton;
+@property (strong, nonatomic) IBOutlet UIButton *redMarkerButton;
+@property (strong, nonatomic) IBOutlet UIButton *blueMarkerButton;
+@property (strong, nonatomic) IBOutlet UIButton *yellowMarkerButton;
+@property (strong, nonatomic) IBOutlet UIImageView *createdByQuickSketchImage;
 
-
+// NOTE(tsd): Could have 1 IBAction and give each button it's own tag. Then use that to do run
+// code.
 - (IBAction)emailButtonActionUp:(id)sender;
 - (IBAction)cameraRollButtonActionUp:(id)sender;
 - (IBAction)eraserButtonActionUp:(id)sender;

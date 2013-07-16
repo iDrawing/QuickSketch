@@ -137,11 +137,13 @@
                                     <action selector="canvasBackgroundActionUp:" destination="2" eventType="touchUpInside" id="p6N-75-xKj"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="created_by.png" translatesAutoresizingMaskIntoConstraints="NO" id="xyn-TJ-2BB"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wKw-u9-0h2" firstAttribute="top" secondItem="ddg-xc-4Co" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4RG-dQ-yTK"/>
                             <constraint firstItem="zOb-dn-P4G" firstAttribute="trailing" secondItem="iZc-XI-h6A" secondAttribute="trailing" type="default" id="9JU-B0-BSZ"/>
+                            <constraint firstAttribute="bottom" secondItem="xyn-TJ-2BB" secondAttribute="bottom" constant="32" id="BTG-Ou-fMy"/>
                             <constraint firstItem="iZc-XI-h6A" firstAttribute="top" secondItem="3" secondAttribute="top" constant="123" id="JpC-PX-srB"/>
                             <constraint firstItem="ddg-xc-4Co" firstAttribute="top" secondItem="6WO-ID-VES" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KOV-8o-FIw"/>
                             <constraint firstItem="zOb-dn-P4G" firstAttribute="leading" secondItem="iZc-XI-h6A" secondAttribute="leading" type="default" id="Kbx-Zq-x6b"/>
@@ -152,6 +154,7 @@
                             <constraint firstItem="ddg-xc-4Co" firstAttribute="trailing" secondItem="wKw-u9-0h2" secondAttribute="trailing" type="default" id="R4y-4M-Gwz"/>
                             <constraint firstItem="wKw-u9-0h2" firstAttribute="leading" secondItem="ddg-xc-4Co" secondAttribute="leading" type="default" id="Usp-E2-YI9"/>
                             <constraint firstItem="qPt-pD-t0a" firstAttribute="leading" secondItem="wKw-u9-0h2" secondAttribute="leading" type="default" id="Vd6-NO-3Bt"/>
+                            <constraint firstItem="xyn-TJ-2BB" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Vz6-aZ-eXR"/>
                             <constraint firstItem="hQY-x6-sTP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="Yqf-px-LyQ"/>
                             <constraint firstItem="wKw-u9-0h2" firstAttribute="trailing" secondItem="qPt-pD-t0a" secondAttribute="trailing" type="default" id="cFb-yF-40A"/>
                             <constraint firstItem="6WO-ID-VES" firstAttribute="top" secondItem="zOb-dn-P4G" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ckF-HV-ws7"/>
@@ -167,6 +170,14 @@
                     </view>
                     <connections>
                         <outlet property="backgroundButton" destination="iZc-XI-h6A" id="ash-Aw-0zv"/>
+                        <outlet property="blackMarkerButton" destination="6WO-ID-VES" id="8LJ-RT-d7t"/>
+                        <outlet property="blueMarkerButton" destination="wKw-u9-0h2" id="XQ1-8i-vJ7"/>
+                        <outlet property="cameraRollButton" destination="m0P-eA-N9P" id="QRZ-mu-9uV"/>
+                        <outlet property="createdByQuickSketchImage" destination="xyn-TJ-2BB" id="GVC-Sy-djT"/>
+                        <outlet property="emailButton" destination="hQY-x6-sTP" id="btP-1l-eRb"/>
+                        <outlet property="eraserButton" destination="zOb-dn-P4G" id="1Wg-AU-mBj"/>
+                        <outlet property="redMarkerButton" destination="ddg-xc-4Co" id="LlJ-AT-okh"/>
+                        <outlet property="yellowMarkerButton" destination="qPt-pD-t0a" id="9VH-4T-Bem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -175,6 +186,7 @@
     </scenes>
     <resources>
         <image name="camera_roll.png" width="45" height="45"/>
+        <image name="created_by.png" width="251" height="17"/>
         <image name="email_button.png" width="45" height="45"/>
         <image name="eraser.png" width="45" height="45"/>
         <image name="grid.png" width="45" height="45"/>
@@ -202,6 +214,14 @@
                 <relationship kind="action" name="redMarkerButtonActionUp:"/>
                 <relationship kind="action" name="yellowMarkerButtonActionUp:"/>
                 <relationship kind="outlet" name="backgroundButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="blackMarkerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="blueMarkerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cameraRollButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="createdByQuickSketchImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="eraserButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="redMarkerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="yellowMarkerButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

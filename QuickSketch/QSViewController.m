@@ -26,6 +26,7 @@
 */
 
 #import "QSViewController.h"
+#import "iToast.h"
 
 @interface QSViewController ()
 
@@ -42,6 +43,8 @@
 {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
+
+    _createdByQuickSketchImage.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -64,6 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Shake support to erase canvas
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake)
@@ -106,8 +110,8 @@
     [canvasView setPathLineWidth:2.0];
 }
 
-- (IBAction)canvasBackgroundActionUp:(id)sender {
-    
+- (IBAction)canvasBackgroundActionUp:(id)sender
+{    
     if (bGridMode == NO)
     {
         bGridMode = YES;
@@ -124,16 +128,48 @@
 
 - (IBAction)cameraRollButtonActionUp:(id)sender
 {
+    // Hide everything before take a snap shoot of canvas
+    _backgroundButton.hidden = YES;
+    _emailButton.hidden = YES;
+    _cameraRollButton.hidden = YES;
+    _eraserButton.hidden = YES;
+    _blackMarkerButton.hidden = YES;
+    _redMarkerButton.hidden = YES;
+    _blueMarkerButton.hidden = YES;
+    _yellowMarkerButton.hidden = YES;
+    
+    _createdByQuickSketchImage.hidden = NO;
+
     UIImage *canvasImage = [canvasView imageByRenderingView];
     if (canvasImage == nil)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cameraroll Error" message: @"Problem creating image of worksheet canvas." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"CameraRoll Error" message: @"Problem creating image of worksheet canvas." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else
     {        
-        UIImageWriteToSavedPhotosAlbum(canvasImage, nil, nil, nil);
+        UIImageWriteToSavedPhotosAlbum(canvasImage, self, @selector(thisImage:hasBeenSavedInPhotoAlbumWithError:usingContextInfo:), nil);
     }
+    
+    // Put it all back
+    _createdByQuickSketchImage.hidden = YES;
+    
+    _backgroundButton.hidden = NO;
+    _emailButton.hidden = NO;
+    _cameraRollButton.hidden = NO;
+    _eraserButton.hidden = NO;
+    _blackMarkerButton.hidden = NO;
+    _redMarkerButton.hidden = NO;
+    _blueMarkerButton.hidden = NO;
+    _yellowMarkerButton.hidden = NO;
+}
+
+- (void)thisImage:(UIImage *)image hasBeenSavedInPhotoAlbumWithError:(NSError *)error usingContextInfo:(void*)ctxInfo
+{
+    if (error)
+        [[iToast makeText:NSLocalizedString(@"Error: Unable to save image to Photo Album.", @"")] show];
+    else
+        [[iToast makeText:NSLocalizedString(@"Success: Image saved to Photo Album.", @"")] show];
 }
 
 - (IBAction)emailButtonActionUp:(id)sender
