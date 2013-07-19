@@ -195,36 +195,6 @@
         <image name="marker_red.png" width="45" height="45"/>
         <image name="marker_yellow.png" width="45" height="45"/>
     </resources>
-    <classes>
-        <class className="DrawingCanvasView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingCanvasView.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="QSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QSViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="blackMarkerButtonActionUp:"/>
-                <relationship kind="action" name="blueMarkerButtonActionUp:"/>
-                <relationship kind="action" name="cameraRollButtonActionUp:"/>
-                <relationship kind="action" name="canvasBackgroundActionUp:"/>
-                <relationship kind="action" name="emailButtonActionUp:"/>
-                <relationship kind="action" name="eraserButtonActionUp:"/>
-                <relationship kind="action" name="redMarkerButtonActionUp:"/>
-                <relationship kind="action" name="yellowMarkerButtonActionUp:"/>
-                <relationship kind="outlet" name="backgroundButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="blackMarkerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="blueMarkerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cameraRollButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="createdByQuickSketchImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="eraserButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="redMarkerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="yellowMarkerButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
